@@ -1,6 +1,6 @@
 # current-volume
 
-# Version:    0.1.0
+# Version:    0.1.1
 # Author:     KeyofBlueS
 # Repository: https://github.com/KeyofBlueS/current-volume
 # License:    GNU General Public License v3.0, https://opensource.org/licenses/GPL-3.0
