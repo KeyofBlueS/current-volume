@@ -49,8 +49,8 @@ exec=/opt/current-volume/current-volume.sh -m
 
 `exec` should point to the path where you saved the `current-volume.sh` script.
 
+<img width="551" height="485" alt="mangohud_volume" src="https://github.com/user-attachments/assets/94fe3ef4-dbd6-432c-9fc3-2ab5ddb97dd1" />
+
 The script will automatically detect if you're running in Steam ($SteamEnv) and display the correct volume with (MUTE) if muted.
 
 This makes it easy to see your system volume directly in games.
-
-
