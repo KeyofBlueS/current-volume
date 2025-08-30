@@ -65,12 +65,11 @@ Options:
 
 ### USING WITH MangoHud
 You can display the current volume in MangoHud by adding a custom command to your MangoHud configuration file (usually ~/.config/mangohud/MangoHud.conf):
-
 custom_text=Volume
-exec=/opt/current-volume/current-volume.sh
+exec=${current_volume_name}
 
 custom_text=Mic
-exec=/opt/current-volume/current-volume.sh -m
+exec=${current_volume_name} -m
 
 
 custom_text is the label that will appear in the overlay.
@@ -82,6 +81,8 @@ The script will automatically detect if you're running in Steam ($SteamEnv) and 
 This makes it easy to see your system volume directly in games.
 "
 }
+
+current_volume_name="$(readlink -f "${0}")"
 
 device='@DEFAULT_AUDIO_SINK@'
 
