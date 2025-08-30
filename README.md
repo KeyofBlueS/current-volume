@@ -1,6 +1,6 @@
 # current-volume
 
-# Version:    0.0.1
+# Version:    0.1.0
 # Author:     KeyofBlueS
 # Repository: https://github.com/KeyofBlueS/current-volume
 # License:    GNU General Public License v3.0, https://opensource.org/licenses/GPL-3.0
@@ -30,11 +30,20 @@ sudo ln -s /opt/current-volume/current-volume.sh /usr/local/bin/current-volume
 ```sh
 $ current-volume
 ```
+```
+Options:
+-s, --sink      Show the default sink (e.g. speakers, headphones) volume (default).
+-m, --mic       Show the default source (e.g. microphone) volume.
+-h, --help      Show this help.
+```
 ### USING WITH MangoHud
 You can display the current volume in MangoHud by adding a custom command to your MangoHud configuration file (usually `~/.config/mangohud/MangoHud.conf`):
 ```
 custom_text=Volume
 exec=/opt/current-volume/current-volume.sh
+
+custom_text=Mic
+exec=/opt/current-volume/current-volume.sh -m
 ```
 `custom_text` is the label that will appear in the overlay.
 
