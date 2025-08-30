@@ -11,7 +11,7 @@ A tiny, lightweight and fast Bash script to show your system's audio volume.
 I mainly wrote this to show the volume in MangoHud, but you can use it anywhere you like, for example in Conky.
 
 ### FEATURES
-- Uses `wpctl` (PipeWire) to get the default audio sink volume.
+- Uses `wpctl` (PipeWire) to get the default audio sink/source volume.
 - Compatible with Steam runtime environments - automatically wraps `wpctl` command in `steam-runtime-launch-client` if SteamEnv is set.
 - Shows volume as a simple percentage, e.g., `5%`, `60%` or `150%`.
 - Adds `(MUTE)` if the audio is muted.
