@@ -2,7 +2,7 @@
 
 # current-volume
 
-# Version:    0.1.0
+# Version:    0.1.1
 # Author:     KeyofBlueS
 # Repository: https://github.com/KeyofBlueS/current-volume
 # License:    GNU General Public License v3.0, https://opensource.org/licenses/GPL-3.0
@@ -40,7 +40,7 @@ current_volume_name="$(readlink -f "${0}")"
 	echo "
 # current-volume
 
-# Version:    0.1.0
+# Version:    0.1.1
 # Author:     KeyofBlueS
 # Repository: https://github.com/KeyofBlueS/current-volume
 # License:    GNU General Public License v3.0, https://opensource.org/licenses/GPL-3.0
@@ -99,9 +99,21 @@ done
 
 while getopts "smh" opt; do
 	case ${opt} in
-		s ) device='@DEFAULT_AUDIO_SINK@'
+		s )
+			if [[ "$device_set" -eq '1' ]]; then
+				echo -e "\e[1;31m## ERROR: -m and -s cannot be used together\e[0m"
+				exit 1
+			fi
+			device='@DEFAULT_AUDIO_SINK@'
+			device_set=1
 		;;
-		m ) device='@DEFAULT_AUDIO_SOURCE@'
+		m )
+			if [[ "$device_set" -eq '1' ]]; then
+				echo -e "\e[1;31m## ERROR: -s and -m cannot be used together\e[0m"
+				exit 1
+			fi
+			device='@DEFAULT_AUDIO_SOURCE@'
+			device_set=1
 		;;
 		h ) givemehelp; exit 0
 		;;
