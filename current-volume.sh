@@ -100,7 +100,7 @@ done
 while getopts "smh" opt; do
 	case ${opt} in
 		s )
-			if [[ "$device_set" -eq '1' ]]; then
+			if [[ "${device_set}" -eq '1' ]]; then
 				echo -e "\e[1;31m## ERROR: -m and -s cannot be used together\e[0m"
 				exit 1
 			fi
@@ -108,7 +108,7 @@ while getopts "smh" opt; do
 			device_set=1
 		;;
 		m )
-			if [[ "$device_set" -eq '1' ]]; then
+			if [[ "${device_set}" -eq '1' ]]; then
 				echo -e "\e[1;31m## ERROR: -s and -m cannot be used together\e[0m"
 				exit 1
 			fi
