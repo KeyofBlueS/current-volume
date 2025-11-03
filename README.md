@@ -5,6 +5,8 @@
 # Repository: https://github.com/KeyofBlueS/current-volume
 # License:    GNU General Public License v3.0, https://opensource.org/licenses/GPL-3.0
 
+### ☕️ [If you like what I do, consider buying me a coffee, it really helps!](https://ko-fi.com/keyofblues) ☕️
+
 ### DESCRIPTION
 A tiny, lightweight and fast Bash script to show your system's audio volume.
 
